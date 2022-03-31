@@ -77,7 +77,7 @@ public class BenchmarkMessageFormatting {
     static  {
         templateEngine = TemplateEngine.createPrecompiled(ContentType.Html);
         try {
-            messageBundle = new MessageBundle(BenchmarkMessageFormatting.class.getClassLoader(), "io/github/hurelhuyag/jteutils/messages");
+            messageBundle = new MessageBundle(BenchmarkMessageFormatting.class.getClassLoader(), "io/github/hurelhuyag/jtecontext/messages");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -100,7 +100,7 @@ public class BenchmarkMessageFormatting {
 
     static {
         var ms = new ReloadableResourceBundleMessageSource();
-        ms.setBasename("classpath:io/github/hurelhuyag/jteutils/messages");
+        ms.setBasename("classpath:io/github/hurelhuyag/jtecontext/messages");
         ms.setDefaultEncoding("UTF-8");
         ms.setCacheSeconds(60*60*6);
         ms.setUseCodeAsDefaultMessage(false);
